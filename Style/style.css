@@ -1,24 +1,45 @@
+@import "common.css";
+@import "../node_modules/reset-css/reset.css";
+@font-face {
+    font-family: "BigJohn";
+    src: url('../font/bigjohn.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SlimJoe";
+    src: url('../font/slimjoe.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     padding: 0;
     margin: 0;
 }
-.clearfix{
+.wrapper{
+    background: url("../image/computer.png") no-repeat center / cover;
+    height: 650px;
+}
+.background{
+    background: #3c4955;
+    height: inherit;
+    opacity: 0.90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    width: 1140px;
+    margin: 0 auto;
+}
+.header_wrapper{
     content: '';
     display: table;
     width: 100%;
     clear: both;
+
 }
-div{
-    box-sizing: border-box;
-}
-header{
-    background: url("image/computer.jpg") no-repeat center / cover;
-    height: 600px;
-}
-.container{
-    width: 1140px;
-    margin: 0 auto;
-}
+
 .logo{
     margin-top: 72px;
     float: left;
@@ -28,19 +49,19 @@ nav{
     margin-top: 120px;
 }
 .menu{
-    padding: 0;
     margin: 0;
     display: block;
     padding: 0px 0px 120px 0px;
 
 }
-.menu li{
+
+.menu li {
     float: left;
     display: block;
     margin-right: 72px;
-    font-family: Lato;
-
+    font-family: "Lato";
 }
+
 .menu_item{
     position: relative ;
 }
@@ -59,35 +80,56 @@ nav{
     text-decoration: none;
     font-size: 14px;
 }
-.h1{
-    font-size: 66px;
-    font-family: "Mariad Pro";
-    text-transform: uppercase;
-    text-align: center;
-
-}
-.title_first{
-    font-family:"Exo";
-    text-transform: uppercase;
-    font-size: 30px;
-    text-align: center;
+.titles_first {
     color: white;
-}
-
-.title{
+    font-size:45px;
     text-align: center;
-    color:white;
+    text-transform: uppercase;
+    margin-top: 40px;
+    font-family: "BigJohn";
+
+
 }
-.contacter{
+h3 {
+    color: white;
+    font-size:30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px;
+    font-family: "SlimJoe";
+
+}
+.button {
+    display: inline-block;
+    width: 130px;
+    padding: 8px;
+    color: #48b871;
+    border: 3px solid #48b871;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    margin-left: 480px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin-bottom: 54px;
+}
+.contacher{
     color:#48bf72;
 }
+
 .image{
     background-color:rgb(60, 73, 85);
     position:absolute;
     padding: 4px;
     border-top-left-radius : 5px;
     border-bottom-left-radius : 5px;
-    margin: 0px 0px 0px 0px;
     text-align: center;
 }
 
@@ -99,8 +141,7 @@ nav{
     height: 25px;
     border-color:rgb(60, 73, 85);
     background-color:rgb(241, 241, 241);
-    border:2px solid rgb(60, 73, 85);
-    text-align: center;
+    text-align: left;
 
 }
 .Email{
@@ -109,7 +150,7 @@ nav{
     padding: 7px;
     border-top-left-radius : 5px;
     border-bottom-left-radius : 5px;
-    margin:0px 0 0 20px;
+    margin:0 0 0 20px;
     text-align: center;
 }
 .email{
@@ -121,8 +162,8 @@ nav{
     height: 25px;
     border-color:rgb(60, 73, 85);
     background-color:rgb(241, 241, 241);
-    border:2px solid rgb(60, 73, 85);
-    text-align: center;
+    text-align: left;
+
 }
 .Message{
     background-color:rgb(60, 73, 85);
@@ -141,8 +182,8 @@ nav{
     width: 408px;
     height: 140px;
     border:2px solid rgb(60, 73, 85);
-    border-color:rgb(60, 73, 85);
     background-color:rgb(241, 241, 241);
+    resize: none;
 
 }
 .Button{
@@ -151,8 +192,36 @@ nav{
     font-size: 10px;
     width:452px;
     height: 30px;
-    border-bottom: 0px;
     border-radius: 3px;
     border: none;
     letter-spacing:2px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background:  #3c4955;
+}
+.copyright {
+    color: #fff;
+    padding: 100px;
+    margin-right: 250px;
+
+}
+.footer-wrapper {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social {
+    display: flex;
+    z-index: 0;
+    margin: 30px;
+
+
 }
